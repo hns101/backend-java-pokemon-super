@@ -1,22 +1,24 @@
 public class WaterPokemon extends PokemonSuper{
 
+    int waterLvl;
 
-    public WaterPokemon(int id, String name, int level, int hp) {
+    public WaterPokemon(int id, String name, int level, int hp, int waterLvl) {
         super(id, name, level, hp);
+        this.waterLvl = waterLvl;
     }
 
     public void hydroPump() {
         int level = getLevel();
         if (level >= 55) {
-            System.out.println(name + " Does Hydro Pump 💦🌪️🌊💧!!!!" + "\n");
+            System.out.println(getName() + " Does Hydro Pump 💦🌪️🌊💧!!!!" + "\n");
         } else {
-            System.out.println(name + " must be at least Level 55 to do Hydro Pump" + "\n");
+            System.out.println(getName() + " must be at least Level 55 to do Hydro Pump" + "\n");
         }
     }
 
     @Override
     public void pokeDance() {
-        System.out.println(name+ " is dancing Bubbling smooth🫧💦💧");
+        System.out.println(getName() + " is dancing Bubbling smooth🫧💦💧");
 
     }
 
